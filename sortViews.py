@@ -1,8 +1,6 @@
 #sorts the views and viewdefs in a views.xml file
 #moves the name attribute first
 #note this replaces the original file, so commit first...
-import re
-import os
 import shlex
 
 fileName = 'common/common.views.xml'
@@ -57,7 +55,7 @@ def getNameAttrIndex(elemAttrList):
       return index
 
 
-def sortxmlElems(xmlstr, section):
+def sortAndFormatXmlElems(xmlstr, section):
 
   openingtag = '<' + section + '>'
   closingtag = '</' + section + '>'
@@ -92,16 +90,3 @@ def sortxmlElems(xmlstr, section):
   newxml = firstxml + openingtag + '\n\n\t\t' + '\n\n\t\t'.join(elements) + '\n\n\t' + closingtag + lastxml
 
   return newxml
-
-###the actual script ###
-
-with open(fileName, 'r') as f:
-  xml = f.read()
-
-sortedviewsxml = sortxmlElems(xml, 'views')
-sortedviewdefsxml = sortxmlElems(sortedviewsxml, 'viewdefs')
-
-with open(fileName, 'w') as f:
-  f.write(sortedviewdefsxml)
-
-print('all done')
