@@ -2,15 +2,15 @@
 
 A simple command line script for formatting the views.xml files that define Specify data entry forms. Doing so makes form customization a little easier. 
 
-This tool uses Click, see instructions there to create and run this tool in a virtual environment, or else just run
+This tool uses Click, see instructions there to create and run this tool in a virtual environment, or else from a terminal / "black window that hackers use" run, just run
 
 `pip install -r requirements.txt`
 
 ...and then
 
-`pip install -g`
+`pip install --editable .`
 
-Then from a terminal / "black window that hackers use" run
+Then to format a file, run
 
 `sortviews --file "viewsfileyouwanttoformat"`
 
