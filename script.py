@@ -15,7 +15,7 @@ def format(file):
 
     #just check we're working with a views.xml file
     if not file.endswith('views.xml'):
-      print('we can only format Specify forms xml files')
+      click.echo('we can only format Specify forms xml files')
       return
 
     with open(file, 'r') as f:
@@ -27,9 +27,9 @@ def format(file):
     with open(file, 'w') as f:
       f.write(sortedviewdefsxml)
 
-    print('all done')
+    click.echo('all done')
   else:
-    print('please provide a valid filename')
+    click.echo('please provide a valid filename')
   
   return
 

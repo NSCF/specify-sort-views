@@ -10,6 +10,8 @@ This tool uses Click, see instructions there to create and run this tool in a vi
 
 `pip install --editable .`
 
+For documentation run `sortviews --help`.
+
 Then to format a file, run
 
 `sortviews --file "viewsfileyouwanttoformat"`

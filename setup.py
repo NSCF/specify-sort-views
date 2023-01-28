@@ -9,7 +9,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'sortviews = script:format',
+            'sortviews=script:format',
         ],
     },
 )
