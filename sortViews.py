@@ -11,7 +11,7 @@ def getElemName(xmlStr):
   nameStart = xmlStr.index('"', nameAttrStart) + 1
   nameEnd = xmlStr.index('"', nameStart)
   name = xmlStr[nameStart:nameEnd]
-  return name
+  return name.lower()
 
 def quoteAttribute(attr):
   if '=' in attr:
